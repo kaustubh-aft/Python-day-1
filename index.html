@@ -26,7 +26,7 @@ async function generate() {
     let city = document.getElementById("city").value
     let pet = document.getElementById("pet").value
 
-    let response = await fetch(`http://127.0.0.1:8000/band?city=${city}&pet=${pet}`)
+    let response = await fetch(`/band?city=${city}&pet=${pet}`)
     let data = await response.json()
 
     document.getElementById("result").innerText = data.result
@@ -37,3 +37,4 @@ async function generate() {
 
 </body>
 </html>
+
