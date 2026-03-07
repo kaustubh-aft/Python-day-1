@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Band Name Generator</title>
+</head>
+
+<body>
+
+<h1>Band Name Generator</h1>
+
+<label>City you grew up in:</label><br>
+<input id="city"><br><br>
+
+<label>Pet name:</label><br>
+<input id="pet"><br><br>
+
+<button onclick="generate()">Generate Band Name</button>
+
+<h2 id="result"></h2>
+
+<script>
+
+async function generate() {
+
+    let city = document.getElementById("city").value
+    let pet = document.getElementById("pet").value
+
+    let response = await fetch(`http://127.0.0.1:8000/band?city=${city}&pet=${pet}`)
+    let data = await response.json()
+
+    document.getElementById("result").innerText = data.result
+
+}
+
+</script>
+
+</body>
+</html>
