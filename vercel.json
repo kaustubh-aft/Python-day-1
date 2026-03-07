@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "api/app.py",
-      "use": "@pypi/vercel-python"
+      "use": "@vercel/python"
     }
   ],
   "routes": [
@@ -13,7 +13,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "api/app.py"
     }
   ]
 }
