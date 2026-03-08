@@ -1,1 +1,2 @@
-# 100-days-python
+# Day one 
+
